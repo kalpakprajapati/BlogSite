@@ -1,0 +1,14 @@
+<%- include("partials/header")-%>
+
+<h1><%= homeContent[0].postTitle %></h1>
+  <p><%= homeContent[0].postBody%></p>
+
+
+<% for(var i=1; i<homeContent.length; i++){ %>
+
+<h1><%= homeContent[i].postTitle %></h1>
+  <p><%= homeContent[i].postBody.substring(0, 100) %>+ "..." <a href="/posts/<%= homeContent[i].postTitle%>">Read More</a></p>
+
+<% } %>
+
+<%- include("partials/footer")-%>
